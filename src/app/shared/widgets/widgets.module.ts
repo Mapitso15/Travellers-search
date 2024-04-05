@@ -15,6 +15,12 @@ import { ItineraryFormComponent } from './itinerary-form/itinerary-form.componen
   ],
   imports: [
     CommonModule
+  ], 
+  exports: [
+    SideNavigationComponent,
+    TopBarComponent,
+    WorldMapComponent,
+    ItineraryFormComponent
   ]
 })
 export class WidgetsModule { }
