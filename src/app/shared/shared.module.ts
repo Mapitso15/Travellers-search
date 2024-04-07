@@ -14,7 +14,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   exports: [
     WidgetsModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
 })
