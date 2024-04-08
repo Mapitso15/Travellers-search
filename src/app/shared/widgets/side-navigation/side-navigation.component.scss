@@ -1,0 +1,25 @@
+@import '../../../../sass/_variables.scss';
+
+.side-navigation {
+  background: $secondary-color;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 62px;
+  color: $white-color;
+  width: 59px;
+  height: 100vh;
+
+
+
+  &__navigation-links {
+    nav {
+      display: flex;
+      flex-direction: column;
+      margin: 0.5em 0 0 1em;
+      line-height: 3;
+      cursor: pointer;
+    }
+
+  }
+}
