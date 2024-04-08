@@ -9,6 +9,7 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
 export class ItineraryFormComponent {
   countries: any = ['USA', 'UK', 'Canada'];
   travelReason: any = ['Marine & Offshore', 'Conference', 'Work'];
+  travellers: any = ['Option 1(Uk)', 'Option 2(Canada)', 'Option 3(USA)'];
 
   itineraryForm = new FormGroup({
     travelOrigin: new FormControl('', Validators.required),

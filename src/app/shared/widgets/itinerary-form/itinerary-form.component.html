@@ -1,50 +1,46 @@
 <section class="itinerary-form">
   <h1>Create Itinerary</h1>
-  <!-- Travel Origin -->
   <form [formGroup]="itineraryForm">
     <div class="form-group">
       <label for="travelOrigin">Travel Origin:</label><br />
       <select formControlName="travelOrigin" class="form-control">
-        <option *ngFor="let country of countries">{{country}}</option>
+        <option *ngFor="let country of countries">{{ country }}</option>
       </select>
     </div>
-    <!-- Travel Destination -->
     <div class="form-group">
-      <label for="travelDestination">Travel Destination:</label><br>
+      <label for="travelDestination">Travel Destination:</label><br />
       <select formControlName="travelDestination" class="form-control">
-        <option *ngFor="let country of countries">{{country}}</option>
+        <option *ngFor="let country of countries">{{ country }}</option>
       </select>
     </div>
-    <!-- Arrival Departure -->
-    <!-- To Do: Add depture and arrival -->
     <span class="arrivalDeputure">
-      <!-- Arrival -->
-
       <div class="form-group">
         <span class="arrival">
-          <label for="arrival">Arrival</label><br>
+          <label for="arrival">Arrival</label><br />
+          <input type="date" id="arrival" name="arrival" />
         </span>
       </div>
-      <!-- Departure -->
       <div class="form-group">
         <span class="departure">
-          <label for="departure">Departure</label><br>
+          <label for="departure">Departure</label><br />
+          <input type="date" id="arrival" name="arrival" />
         </span>
       </div>
     </span>
-    <!-- Purpose of Travel -->
-    <label for="PurposeOfTravel">Purpose of Travel:</label><br>
+    <label for="PurposeOfTravel">Purpose of Travel:</label><br />
     <div class="form-group">
       <select formControlName="purposeOfTravel" class="form-control">
-        <option *ngFor="let purposeOfTravel of travelReason">{{purposeOfTravel}}</option>
+        <option *ngFor="let purposeOfTravel of travelReason">
+          {{ purposeOfTravel }}
+        </option>
       </select>
     </div>
-    <!-- Add Travellers -->
-    <!-- To Do: fix form field to multi select -->
     <div class="form-group">
-      <label for="AddTravellers">Add Travellers:</label><br>
+      <label for="AddTravellers">Add Travellers:</label><br />
       <select formControlName="addTravellers" class="form-control">
-        <option *ngFor="let country of countries">{{country}}</option>
+        <option *ngFor="let traveller of travellers" [value]="traveller">
+          {{ traveller }}
+        </option>
       </select>
     </div>
   </form>
