@@ -1,1 +1,47 @@
-<p>itinerary-form works!</p>
+<section class="itinerary-form">
+  <h1>Create Itinerary</h1>
+  <form [formGroup]="itineraryForm">
+    <div class="form-group">
+      <label for="travelOrigin">Travel Origin:</label><br />
+      <select formControlName="travelOrigin" class="form-control">
+        <option *ngFor="let country of countries">{{ country }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="travelDestination">Travel Destination:</label><br />
+      <select formControlName="travelDestination" class="form-control">
+        <option *ngFor="let country of countries">{{ country }}</option>
+      </select>
+    </div>
+    <span class="arrivalDeputure">
+      <div class="form-group">
+        <span class="arrival">
+          <label for="arrival">Arrival</label><br />
+          <input type="date" id="arrival" name="arrival" />
+        </span>
+      </div>
+      <div class="form-group">
+        <span class="departure">
+          <label for="departure">Departure</label><br />
+          <input type="date" id="arrival" name="arrival" />
+        </span>
+      </div>
+    </span>
+    <label for="PurposeOfTravel">Purpose of Travel:</label><br />
+    <div class="form-group">
+      <select formControlName="purposeOfTravel" class="form-control">
+        <option *ngFor="let purposeOfTravel of travelReason">
+          {{ purposeOfTravel }}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="AddTravellers">Add Travellers:</label><br />
+      <select formControlName="addTravellers" class="form-control">
+        <option *ngFor="let traveller of travellers" [value]="traveller">
+          {{ traveller }}
+        </option>
+      </select>
+    </div>
+  </form>
+</section>

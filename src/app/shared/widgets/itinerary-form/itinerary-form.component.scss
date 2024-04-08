@@ -1,0 +1,49 @@
+@import "../../../../sass/_variables.scss";
+
+.itinerary-form {
+  background: $custom-color;
+  color: $white-color;
+  position: relative;
+  width: 410px;
+  height: 80vh;
+  padding: 1em;
+  left: 73px;
+  z-index: 2;
+
+  h1 {
+    line-height: 29.26px;
+  }
+
+  .form-group {
+    padding: 0.5em 0;
+  }
+
+  select {
+    background-color: $custom-color;
+    border: 1px solid $white-color;
+    border-radius: 8px;
+    color: $white-color;
+    width: 398px;
+    height: 40px;
+    padding: 4px 8px;
+  }
+
+  input {
+    background-color: $custom-color;
+    border: 1px solid $white-color;
+    border-radius: 8px;
+    color: $white-color;
+    width: 169px;
+    height: 34px;
+    padding: 4px 8px;
+  }
+
+  .arrivalDeputure {
+    display: flex;
+    flex-direction: row;
+
+    .arrival {
+      padding-right: 1.5em;
+    }
+  }
+}
